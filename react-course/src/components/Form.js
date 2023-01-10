@@ -8,6 +8,7 @@ const Form = () => {
     bio: "",
     nri: true,
     citizenship: "",
+    planet: "",
   });
 
   function setFormHandler(e) {
@@ -15,8 +16,17 @@ const Form = () => {
     setFormData({ ...formData, [name]: type === "checkbox" ? checked : value });
   }
 
+  function formSubmitHandler(e) {
+    e.preventDefault();
+    for (const key in formData) {
+      if (!formData[key]) {
+        console.log("please fill:", key);
+      }
+    }
+  }
+
   return (
-    <div className="form__container">
+    <form className="form__container" onSubmit={formSubmitHandler}>
       <input
         type="text"
         className="inputBoxes"
@@ -95,7 +105,24 @@ const Form = () => {
           New Zeland
         </label>
       </fieldset>
-    </div>
+      <label className="planets__label" htmlFor="planet">
+        Your favourite planet?
+      </label>
+      <select
+        value={formData.planet}
+        onChange={setFormHandler}
+        name="planet"
+        id="planet"
+      >
+        <option value="choose">-- Choose --</option>
+        <option value="mars">Mars</option>
+        <option value="jupiter">Jupiter</option>
+        <option value="saturn">Saturn</option>
+        <option value="uranus">Uranus</option>
+      </select>
+      <br />
+      <button>Submit</button>
+    </form>
   );
 };
 

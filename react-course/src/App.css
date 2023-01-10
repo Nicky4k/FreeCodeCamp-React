@@ -74,8 +74,20 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
 }
 
 .fieldSet > label > input {
   margin: 0 0.5rem 0 0;
+}
+
+#nri {
+  margin-left: 1rem;
+}
+
+.planets__label {
+  margin: 1rem;
+}
+button {
+  padding: 0.25rem 0.5rem;
 }
