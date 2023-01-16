@@ -7,12 +7,19 @@ const WindowWidth = () => {
   });
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    function resizeHandler() {
+      console.log("init");
       setDimensions({
         innerHeight: window.innerHeight,
         innerWidth: window.innerWidth,
       });
-    });
+    }
+    window.addEventListener("resize", resizeHandler);
+
+    return function () {
+      console.log("removing memory leaks");
+      window.removeEventListener("resize", resizeHandler);
+    };
   }, []);
 
   return (

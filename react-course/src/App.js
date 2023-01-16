@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Form from "./components/Form";
 import ImgFlip from "./components/ImgFlip";
@@ -6,6 +7,7 @@ import StarWars from "./components/StarWars";
 import WindowWidth from "./components/WindowWidth";
 
 function App() {
+  const [showComponent, setShowComponent] = useState(true);
   return (
     <div className="App">
       <main className="main__container">
@@ -14,7 +16,14 @@ function App() {
         {/* <SignUpForm /> */}
         {/* <StarWars /> */}
         {/* <ImgFlip /> */}
-        <WindowWidth />
+
+        {showComponent && <WindowWidth />}
+        <button
+          onClick={() => setShowComponent(!showComponent)}
+          style={{ margin: "2rem" }}
+        >
+          Toggle Components
+        </button>
       </main>
     </div>
   );
