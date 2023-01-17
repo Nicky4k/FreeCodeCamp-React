@@ -5,9 +5,12 @@ const ImgFlip = () => {
   const [count, setCount] = useState(0);
 
   useEffect(function () {
-    fetch(`https://api.imgflip.com/get_memes`)
-      .then((res) => res.json())
-      .then((op) => setMemes(op.data.memes));
+    async function getImages() {
+      const images = await fetch(`https://api.imgflip.com/get_memes`);
+      const op = await images.json();
+      setMemes(op.data.memes);
+    }
+    getImages();
   }, []);
 
   function generateNewMemeHandler() {
