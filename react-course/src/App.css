@@ -54,7 +54,7 @@
   height: 40rem;
   margin: 1rem;
   padding: 1rem 0;
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(106, 106, 106);
   border-radius: 0.25rem;
 }
 
@@ -114,7 +114,7 @@ button {
   margin: 1rem;
   padding: 2rem 0;
   align-items: center;
-  background-color: rgb(46, 1, 76);
+  background-color: rgb(135, 64, 183);
   border-radius: 0.25rem;
 }
 
@@ -258,4 +258,13 @@ main.dark {
 .main--facts > li::marker {
   font-size: 1.4rem;
   color: #61dafb;
+}
+
+.userDetails {
+  width: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  border: 1rem rgb(135, 64, 183) solid;
+  background-color: rgb(217, 161, 255);
+  border-radius: 0.25rem;
 }

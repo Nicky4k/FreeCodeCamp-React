@@ -1,7 +1,6 @@
 import React from "react";
 
 const NavBar = ({ props }) => {
-  console.log(props.darkMode);
   return (
     <nav className={props.darkMode ? "dark" : ""}>
       <img className="nav--logo_icon" src="" alt="" />
