@@ -27,7 +27,7 @@ function App() {
         {showComponent && <WindowWidth />}
         <button
           onClick={() => setShowComponent(!showComponent)}
-          style={{ margin: "2rem" }}
+          style={{ margin: "2.25rem" }}
         >
           Toggle Components
         </button>
