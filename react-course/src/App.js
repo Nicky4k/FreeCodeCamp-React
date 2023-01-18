@@ -6,6 +6,7 @@ import MainPageToggleTheme from "./components/MainPageToggleTheme";
 import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import StarWars from "./components/StarWars";
+import Tenzies from "./components/Tenzies";
 import WindowWidth from "./components/WindowWidth";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <div className="App">
       <main className="main__container">
         <p>Controlled Components</p>
+        <Tenzies />
         <Form />
         <SignUpForm />
         <StarWars />
